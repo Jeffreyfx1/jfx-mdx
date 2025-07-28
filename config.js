@@ -2,7 +2,7 @@ const fs = require('fs');
 if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
 
 module.exports = {
-  SESSION_ID: process.env.SESSION_ID || "",
+  SESSION_ID: process.env.SESSION_ID || "CREEPY-Kw4BDaQD#HTpY0ucYNKl-vuqPTF4dHuUEowSjOwOIUJNOpc2jizw-Danny",
 
   AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "true",
   AUTO_STATUS_REPLY: process.env.AUTO_STATUS_REPLY || "false",
