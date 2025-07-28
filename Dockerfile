@@ -1,15 +1,20 @@
-FROM node:lts-buster
+# Use official Node.js LTS image
+FROM node:lts
 
-# Clone your bot repository — replace with your actual repo if needed
-RUN git clone https://github.com/Jeffreyfx1/jfx-mdx.git
+# Set working directory
+WORKDIR /app
 
-WORKDIR /root/JFX-MD-X
+# Copy package files
+COPY package*.json ./
 
-# Install dependencies
-RUN npm install && npm install -g pm2 || yarn install --network-concurrency 1
+# Install dependencies (includes pm2 from your package.json)
+RUN npm install
 
+# Copy the rest of the code
 COPY . .
 
-EXPOSE 9090
+# Expose port (optional, only if you're running a web server)
+EXPOSE 3000
 
-CMD ["npm", "start"]
+# Start the bot using pm2 from node_modules
+CMD ["npx", "pm2-runtime", "index.js", "--name", "NEXUS-XMD"]
