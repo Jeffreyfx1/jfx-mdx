@@ -1,12 +1,12 @@
 {
-  "name": "NEXUS-XMD",
+  "name": "JFX MD-X",
   "version": "4.0.0",
-  "description": "A WhatsApp Bot Created By Pkdriller",
+  "description": "A WhatsApp Bot Created By JEPHTERTECH",
   "main": "index.js",
   "scripts": {
     "start": "pm2 start index.js --deep-monitoring --attach --name NEXUS-XMD",
-    "stop": "pm2 stop NEXUS-XMD",
-    "restart": "pm2 restart NEXUS-XMD"
+    "stop": "pm2 stop JFX MD-X",
+    "restart": "pm2 restart JFX MD-X"
   },
   "dependencies": {
     "@whiskeysockets/baileys": "npm:@fizzxydev/baileys-pro@8.5.12",
